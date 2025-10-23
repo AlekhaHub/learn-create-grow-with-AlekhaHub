@@ -1,0 +1,77 @@
+/* --- Existing styles remain same above --- */
+
+/* Resources Section */
+.resources {
+  margin-top: 80px;
+  text-align: center;
+}
+.resources h2 {
+  color: var(--white);
+}
+.section-intro {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 10px auto 40px;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.resource-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  text-align: left;
+}
+.resource-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+.resource-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.resource-card .content {
+  padding: 18px;
+}
+.resource-card h3 {
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.resource-card p {
+  color: var(--white);
+  opacity: 0.9;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.btn-mini {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.btn-mini:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .resource-card img {
+    height: 180px;
+  }
+}
